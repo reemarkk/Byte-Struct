@@ -6,7 +6,7 @@ void printHex(long long int a){
 }
 
 typedef union byte{
-     
+    // Array of 8 bytes to represent each bytes of the integer
     struct each{
         char b[8];
     }each;
@@ -16,10 +16,10 @@ typedef union byte{
 } byte;
 
 long long int hton64(long long int c){
-     byte result;
-     result.value = c;
+     byte result; //instance of union 
+     result.value = c;  //keeping C's bytes in array
      
-     
+     // Swap bytes
     for (int i =0; i<4;i++){
          char temp = result.each.b[i]; 
          result.each.b[i]= result.each.b[7-i];
