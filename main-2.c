@@ -6,7 +6,7 @@ void printHex(long long int a){
 }
 
 typedef union byte{
-    // Array of 8 bytes to represent each bytes of the integer
+    // array of 8 bytes to represent each bytes of the integer
     struct each{
         char b[8];
     }each;
